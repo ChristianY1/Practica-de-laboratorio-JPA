@@ -50,4 +50,6 @@ public interface GenericDAO<T, ID> {
 	
 	public List<Telefono> buscarContacto3(Telefono telefono);
 	public List<Telefono> find2(Telefono telefono);
+
+	List<T> find(String[] attributes, String[] values, String order, int index, int size);
 }

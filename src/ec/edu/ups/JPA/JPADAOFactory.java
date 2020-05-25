@@ -1,28 +1,27 @@
-package ec.edu.ups.dao;
+package ec.edu.ups.JPA;
 
-import ec.edu.ups.mysql.jdbc.JDBCTelefonoDAO;
-import ec.edu.ups.mysql.jdbc.JDBCUsuarioDAO;
+import ec.edu.ups.dao.DAOFactory;
+import ec.edu.ups.dao.TelefonoDAO;
+import ec.edu.ups.dao.UsuarioDAO;
 
-public class JDBCFactory extends DAOFactory{
-
+public class JPADAOFactory extends DAOFactory{
 
 	@Override
 	public void createTables() {
 		// TODO Auto-generated method stub
-		
 		
 	}
 
 	@Override
 	public UsuarioDAO getUsuarioDAO() {
 		// TODO Auto-generated method stub
-		return new JDBCUsuarioDAO();
+		return new JPAUsuario(null, null);
 	}
 
 	@Override
 	public TelefonoDAO getTelefonoDAO() {
 		// TODO Auto-generated method stub
-		return new JDBCTelefonoDAO();
+		return new JPATelefono(null, null);
 	}
 
 }
